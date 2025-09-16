@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #transposition cipher
 #Ceasar cipher(set of keys)
 #encryption
@@ -55,3 +56,61 @@ decrypted_msg = decrypted_message(encrypted_msg, key)
 # Show the result
 print(f"The Encrypted Message is:{encrypted_msg}")
 print(f"The Decrypted Message is: {decrypted_msg}")
+=======
+#transposition cipher
+#Ceasar cipher(set of keys)
+#encryption
+#1918 enigma machine
+#1960s - 1970s fernando corbato is credited with deploying the first password system
+
+# Simple Python Encryption Program
+
+def encrypt_message(message, key):
+    encrypted = ""
+    key_length = len(key)
+    
+    for i, char in enumerate(message):
+        # Get ASCII value of message char
+        message_ascii = ord(char)
+        # Get ASCII value of key char (repeating)
+        key_ascii = ord(key[i % key_length])
+        # Shift message char by key's ASCII value (mod 256 for byte range)
+        encrypted_char = chr((message_ascii + key_ascii) % 256)
+        encrypted += encrypted_char
+    
+    return encrypted
+
+def decrypted_message(message, key):
+    decrypted = ""
+    key_length = len(key)
+    for i, char in enumerate(message):
+        # Get ASCII value of message char
+        message_ascii = ord(char)
+        # Get ASCII value of key char (repeating)
+        key_ascii = ord(key[i % key_length])
+        # Shift message char by key's ASCII value (mod 256 for byte range)
+        decrypted_char = chr((message_ascii - key_ascii) % 256)
+        decrypted += decrypted_char
+    
+    return decrypted
+
+
+# Ask for a 5-character key
+while True:
+    key = input("Enter a 5-character encryption key: ")
+    if len(key) == 5:
+        break
+    else:
+        print("Key must be exactly 5 characters.")
+
+# Ask for the message
+message = input("Enter the message to encrypt: ")
+
+# Encrypt the message
+encrypted_msg = encrypt_message(message, key)
+decrypted_msg = decrypted_message(encrypted_msg, key)
+
+# Show the result
+print(f"The Encrypted Message is: {encrypted_msg}")
+print(f"The Decrypted Message is: {decrypted_msg}")
+>>>>>>> Stashed changes
