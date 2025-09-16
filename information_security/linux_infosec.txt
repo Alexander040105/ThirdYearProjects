@@ -1,0 +1,12 @@
+create user in linux named IASstudent
+sudo add user IASstudent
+
+Linux users ng laptop ko:
+
+Infosec Acc
+username: IASstudent
+password: Jade_092004
+
+OS Account
+username: jonnn
+password: Jade_092004

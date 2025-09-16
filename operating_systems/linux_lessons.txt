@@ -1,0 +1,10 @@
+linux commands lesson
+sudo apt update
+sudo apt install nano -y
+ls == dir
+sudo apt install python3 -1
+
+to run a python file: python3 filename.py
+
+sudo su = super user command
+usermod -a -G sudo IASstudent
