@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hash Results</h1>
+
+    <div class="hash1">
+        <h3>Hash 1 : {{ hash1 }}</h3>
+        <img src="{{ url_for('preview', filename='photo1') }}" alt="">
+    </div>
+    <div class="hash2">
+        <h3>Hash 2 : {{ hash2 }}</h3>
+        <img src="{{ url_for('preview', filename='photo2') }}" alt="">
+    </div>
+</body>
+</html>
