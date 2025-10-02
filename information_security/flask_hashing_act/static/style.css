@@ -89,12 +89,17 @@ body > .hash2 {
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
 }
 
 /* Form Styles */

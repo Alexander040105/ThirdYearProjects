@@ -29,9 +29,16 @@ def hash():
             hash2 = hashlib.sha256(cache["photo2"].getvalue()).hexdigest()
         else:
             return "Invalid hash type", 400
-        return render_template('hash-results.html', hash1=hash1, hash2=hash2, filename1='/preview/photo1', filename2='/preview/photo2')
+        
+        hash_comparison = compare_hashes(hash1, hash2)
+        if hash_comparison:
+            return render_template('hash-results.html', hash1=hash1, hash2=hash2, filename1='/preview/photo1', filename2='/preview/photo2', message="The files are identical.")
+        return render_template('hash-results.html', hash1=hash1, hash2=hash2, filename1='/preview/photo1', filename2='/preview/photo2', message="Files have been tampered/modified.")
     return redirect(url_for("home"))
 
+
+def compare_hashes(hash1, hash2):
+    return hash1 == hash2
 
 @app.route("/preview/<filename>")
 def preview(filename):

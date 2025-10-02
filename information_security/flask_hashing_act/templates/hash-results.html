@@ -16,7 +16,9 @@
         </div>
     </nav>
 
-    <h1>Hash Results</h1>
+    <h1>Hash Results: </h1>
+    <h2 id="hash-message">{{ message }}</h2>
+    
 
     <div class="hash1">
         <h3>Hash 1 : {{ hash1 }}</h3>
@@ -26,5 +28,15 @@
         <h3>Hash 2 : {{ hash2 }}</h3>
         <img src="{{ url_for('preview', filename='photo2') }}" alt="">
     </div>
+
+    <script>
+        
+        var hashMessage = document.getElementById('hash-message');
+        if (hashMessage.innerHTML.includes("The files are identical.")) {
+            hashMessage.style.color = "#4BE68EFF";
+        } else if (hashMessage.innerHTML.includes("Files have been tampered/modified.")) {
+            hashMessage.style.color = "#D15449FF";
+        }
+    </script>
 </body>
 </html>
