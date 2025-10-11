@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 #transposition cipher
 #Ceasar cipher(set of keys)
 #encryption
@@ -56,7 +56,7 @@ decrypted_msg = decrypted_message(encrypted_msg, key)
 # Show the result
 print(f"The Encrypted Message is:{encrypted_msg}")
 print(f"The Decrypted Message is: {decrypted_msg}")
-=======
+
 #transposition cipher
 #Ceasar cipher(set of keys)
 #encryption
@@ -113,4 +113,4 @@ decrypted_msg = decrypted_message(encrypted_msg, key)
 # Show the result
 print(f"The Encrypted Message is: {encrypted_msg}")
 print(f"The Decrypted Message is: {decrypted_msg}")
->>>>>>> Stashed changes
+
