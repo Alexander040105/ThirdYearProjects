@@ -1,10 +1,13 @@
-from flask import Flask, request, redirect, send_file, url_for, render_template_string, render_template
+from flask import Flask, request, session, redirect, send_file, url_for, render_template_string, render_template
 from io import BytesIO  
 import hashlib
 import dotenv
+import time
 cache = {}
-
+global numfail_attempts
+numfail_attempts = 5
 app = Flask(__name__)
+app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 @app.route("/hash", methods=["GET", "POST"])
 def hash():
@@ -67,8 +70,6 @@ def encrypt():
         return render_template("act1.html", encrypted_message=encrypted_message, mode="encrypt")
     return render_template("act1.html", mode="encrypt")
 
-
-
 def decrypted_text(message, key):
     decrypted = ""
     key_length = len(key)
@@ -104,22 +105,35 @@ def preview(filename):
 def home():
     return render_template("home.html")
 
+def numfail_attempts_decrement():
+    global numfail_attempts
+    numfail_attempts -= 1
+    timer = 30
+    if numfail_attempts < 0:
+        numfail_attempts = 5
+        timer += 30
+    return numfail_attempts, timer
+
+
 @app.route("/verify", methods=["GET", "POST"])
 def verify():
+    numfail, timer = numfail_attempts_decrement()
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
         
         if username == "" or password == "":
-            return render_template("login.html", error="Please enter both username and password.")
+            return render_template("login.html", error_message="Please enter both username and password.")
         elif username == "Infosec" and password == "1nf053c!":
+            global numfail_attempts 
+            numfail_attempts = 5
             return redirect(url_for("home"))
-        return render_template("login.html", error="Invalid credentials. Please try again.")
-    return render_template("login.html")
+        return render_template("login.html", error_message="Invalid credentials. Please try again.", numfail=numfail, timer=timer)
+    return render_template("login.html", error_message='', numfail='', timer='')
 
 @app.route("/")
 def login():
-    return render_template("login.html")
+    return render_template("login.html", error_message='', numfail='', timer='')
 
 if __name__ == "__main__":
     # app.run(host="172.16.0.29", port=8080, debug=False)

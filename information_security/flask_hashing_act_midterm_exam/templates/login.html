@@ -9,19 +9,52 @@
 <body>
 
     <form method="POST" 
-        action="{{ url_for('verify') }}" id="user-input" enctype="multipart/form-data">
+        action="{{ url_for('verify') }}" id="user-input" class="login-form" enctype="multipart/form-data">
 
-        <div class="upload-photos">
+        <div class="login-username">
             <h3>Username</h3>
-            <input type="text" name="username" required>
+            <input id="username" type="text" name="username" required>
         </div>
 
-        <div class="upload-photos">
+        <div class="login-password">
             <h3>Password</h3>
-            <input type="password" name="password" required>
+            <input id="password" type="password" name="password" required>
         </div>
 
         <input type="submit" value="Submit" id="submit">
     </form>
+    <h3 class="error">{{ error_message }} <span id="timer"></span></h3>
+
+    <script>
+        var numfail = parseInt({{ numfail | tojson }}, 10);
+        console.log(numfail);
+
+        if (numfail <= 0) {
+            document.getElementById("username").disabled = true;
+            document.getElementById("password").disabled = true;
+
+            let timerElement = document.getElementById("timer");
+            let seconds = parseInt({{ timer | tojson }}, 10); 
+            timerElement.innerHTML = `Timer: ${seconds}s`;
+
+            let countdown = setInterval(function() {
+                seconds -= 1;
+                timerElement.innerHTML = `Timer: ${seconds}s`;
+
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    document.getElementById("username").disabled = false;
+                    document.getElementById("password").disabled = false;
+                    timerElement.textContent = "";
+                    numfail = 30;
+                    window.location.reload();
+                }  
+            }, 1000); 
+        }
+    </script>
+
+
+
+
 </body>
 </html>

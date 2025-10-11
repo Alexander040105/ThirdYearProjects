@@ -22,7 +22,7 @@
         <form method="POST" 
             action="{{ url_for('encrypt') }}" id="user-input" enctype="multipart/form-data">
 
-            <div class="upload-photos">
+            <div class="upload-encrypt">
                 <h3>Type the message you want to encrypt</h3>
                 <input type="text" name="message" required>
                 <h3>Type your encryption key</h3>
@@ -34,7 +34,7 @@
         <form method="POST" 
             action="{{ url_for('decrypt') }}" id="user-input" enctype="multipart/form-data">
 
-            <div class="upload-photos">
+            <div class="upload-decrypt">
                 <h3>Type the message you want to decrypt</h3>
                 <input type="text" name="message" required>
                 <h3>Type your decryption key</h3>

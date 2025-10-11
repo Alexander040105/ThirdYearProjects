@@ -1,78 +1,78 @@
 /* Modern Dark Mode CSS for Hash Comparison App */
 
 :root {
-    --bg-primary: #0f0f0f;
-    --bg-secondary: #1a1a1a;
-    --bg-card: #242424;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent: #3b82f6;
-    --accent-hover: #2563eb;
-    --border: #333333;
-    --success: #10b981;
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #242424;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --border: #333333;
+  --success: #10b981;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
-    min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar-brand:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .navbar-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    }
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
 
 .navbar-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .navbar-links a:hover {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 /* Main Content Container */
@@ -80,185 +80,343 @@ body > h1,
 body > form,
 body > .hash1,
 body > .hash2 {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 /* Page Heading */
 h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
-    background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-h2{
-    text-align: center;
-    font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Form Styles */
 #user-input {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .upload-photos,
 .hash-type {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .upload-photos h3,
 .hash-type h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 /* File Input Styles */
 input[type="file"] {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: var(--bg-secondary);
-    border: 2px dashed var(--border);
-    border-radius: 8px;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all 0.3s;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-secondary);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 input[type="file"]:hover {
-    border-color: var(--accent);
-    background-color: var(--bg-primary);
+  border-color: var(--accent);
+  background-color: var(--bg-primary);
 }
 
 input[type="file"]:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* Select Dropdown Styles */
 #hash_type {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 #hash_type:hover {
-    border-color: var(--accent);
+  border-color: var(--accent);
 }
 
 #hash_type:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 #hash_type option {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 /* Submit Button Styles */
 #submit {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--accent) 0%, #2563eb 100%);
-    color: var(--text-primary);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
-    }
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #2563eb 100%);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
 
 #submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
 }
 
 #submit:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* Hash Results Styles */
 .hash1,
 .hash2 {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hash1 h3,
 .hash2 h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
-    word-break: break-all;
-    font-family: "Courier New", monospace;
-    background-color: var(--bg-secondary);
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+  font-family: "Courier New", monospace;
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
 }
 
 .hash1 img,
 .hash2 img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Login Form Styles */
+.login-form {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: 4rem auto;
+}
+
+.login-username,
+.login-password {
+  margin-bottom: 2rem;
+}
+
+.login-username h3,
+.login-password h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.login-username input,
+.login-password input {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.login-username input:hover,
+.login-password input:hover {
+  border-color: var(--accent);
+}
+
+.login-username input:focus,
+.login-password input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.error {
+  text-align: center;
+  color: #ef4444;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Encrypt/Decrypt Form Styles */
+.upload-encrypt,
+.upload-decrypt {
+  margin-bottom: 2rem;
+}
+
+.upload-encrypt h3,
+.upload-decrypt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.upload-encrypt input,
+.upload-decrypt input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.upload-encrypt input:hover,
+.upload-decrypt input:hover {
+  border-color: var(--accent);
+}
+
+.upload-encrypt input:focus,
+.upload-decrypt input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Results Display Styles */
+.results {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.results h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.results p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  word-break: break-all;
+  font-family: "Courier New", monospace;
+  line-height: 1.8;
+}
+
+/* Hash Message Styles */
+#hash-message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  max-width: 800px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1rem;
-    }
+  .navbar {
+    padding: 1rem;
+  }
 
-    .navbar-content {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    #user-input {
-        padding: 1.5rem;
-    }
+  #user-input {
+    padding: 1.5rem;
+  }
 
-    .hash1,
-    .hash2 {
-        padding: 1.5rem;
-    }
+  .hash1,
+  .hash2 {
+    padding: 1.5rem;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .results {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .results h3 {
+    font-size: 1.25rem;
+  }
+
+  .results p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  #hash-message {
+    font-size: 1.25rem;
+    padding: 1rem;
+    margin: 1.5rem 1rem;
+  }
 }
