@@ -10,3 +10,4 @@ pydotplus
 graphviz
 pickle
 flask
+dotenv

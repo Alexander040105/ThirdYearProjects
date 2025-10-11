@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="{{ url_for('home') }}" class="navbar-brand">🔐 Hash Comparator</a>
+            <ul class="navbar-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('encrypt') }}">Encrypt</a></li>
+                <li><a href="{{ url_for('decrypt') }}">Decrypt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% if  mode == "encrypt" %}
+        <form method="POST" 
+            action="{{ url_for('encrypt') }}" id="user-input" enctype="multipart/form-data">
+
+            <div class="upload-photos">
+                <h3>Type the message you want to encrypt</h3>
+                <input type="text" name="message" required>
+                <h3>Type your encryption key</h3>
+                <input type="text" name="key" required>
+            </div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    {% elif mode == 'decrypt' %}
+        <form method="POST" 
+            action="{{ url_for('decrypt') }}" id="user-input" enctype="multipart/form-data">
+
+            <div class="upload-photos">
+                <h3>Type the message you want to decrypt</h3>
+                <input type="text" name="message" required>
+                <h3>Type your decryption key</h3>
+                <input type="text" name="key" required>
+            </div>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    {% endif %}
+
+    <div class="results">
+        {% if encrypted_message %}
+            <h3>Encrypted Message:</h3>
+            <p>{{ encrypted_message }}</p>
+        {% endif %}
+        {% if decrypted_message %}
+            <h3>Decrypted Message:</h3>
+            <p>{{ decrypted_message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
