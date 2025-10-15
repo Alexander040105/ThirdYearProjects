@@ -11,3 +11,4 @@ graphviz
 pickle
 flask
 dotenv
+mlxtend
