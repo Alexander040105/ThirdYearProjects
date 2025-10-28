@@ -12,3 +12,8 @@ pickle
 flask
 dotenv
 mlxtend
+mysql-connector-python-rf
+mysql-connector-python
+sqlalchemy
+mysqlclient
+pymysql
