@@ -1,0 +1,83 @@
+Problem 1 Solution:
+mkdir Document_Listings
+dir *.txt /b > Document_Listings\txt_files_list.txt
+
+Problem 2 Solution:
+mkdir Word_Documents
+copy *.docx Word_Documents
+
+Problem 3 Solution:
+ren test1.txt first_example.txt
+
+Problem 4 Solution:
+del *.log
+
+Problem 5 Solution:
+mkdir Web_Content
+move *.html Web_Content
+
+Problem 6 Solution:
+dir *test5*
+
+Problem 7 Solution:
+mkdir PDF_Archives
+copy *.pdf PDF_Archives
+del *.pdf
+
+Problem 8 Solution: 
+mkdir Legacy_Data
+move test100.docx Legacy_Data\original_legacy_log.docx
+
+Problem 9 Solution:
+mkdir Reports_Generated
+cd Reports_Generated
+dir ..\*.csv /b > csv_summary.txt
+
+Problem 10 Solution:
+copy test100.docx final_submission.docx
+
+Problem 11 Solution:
+cd ..
+del test50.pdf
+
+Problem 12 Solution:
+mkdir Program_Files
+move *.exe Program_files
+
+Problem 13 Solution:
+dir *.json *.xml /b
+
+Problem 14 Solution:
+ren test1.txt my_first_document.txt
+ren test2.txt my_second_document.txt
+
+Problem 15 Solution:
+mkdir Project_Archives 
+copy test30.csv Project_Archives
+copy test40.html Project_Archives
+
+Problem 16 Solution:
+mkdir Project_Work\Phase1\Documentation
+cd Project_Work\Phase1\Documentation
+
+Problem 17 Solution:
+del test*.bat
+
+Problem 18 Solution:
+mkdir Unique_Items
+move test99.docx Unique_Items\important_last_item.docx
+
+Problem 19 Solution:
+dir /a /s > full_project_listing.txt
+
+
+Problem 20 Solution:
+mkdir Key_Assets
+copy test1.txt Key_Assets
+copy test1.bat Key_Assets
+del test1.txt
+del test1.bat
+
+
+
+
