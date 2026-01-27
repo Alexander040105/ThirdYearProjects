@@ -6,14 +6,10 @@ ipykernel
 plotly
 kaleido
 scikit-learn
-pydotplus
-graphviz
-pickle
 flask
 dotenv
 mlxtend
 mysql-connector-python-rf
 mysql-connector-python
 sqlalchemy
-mysqlclient
 pymysql
