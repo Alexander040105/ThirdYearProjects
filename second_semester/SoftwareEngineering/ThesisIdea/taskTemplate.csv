@@ -1,0 +1,24 @@
+Task,Status,Priority,Tags,Page/Module,Notes
+Design Login & Registration Page,To Do,High,"Authentication,Frontend,Security",Page 0 - Login/Register,User access entry point
+Implement OTP Verification,To Do,High,"Security,Verification",Authentication,Reduce fake customer scams
+Create Home Page Layout,To Do,Medium,"Frontend,UI/UX",Page 1 - Home,About location and contact info
+Add Placeholder Images,Backlog,Low,"UI/UX,Design",Page 1 - Home,Temporary images for presentation
+Encode Booking Guidelines & House Rules,To Do,High,"Business Rules,Content",Page 2 - Guidelines,Based on yellow pad rules
+Implement Fixed vs Flexi Time Logic,To Do,High,"Scheduling,Validation",Booking Rules,Weekday-only flexi rule
+Develop Booking Form,To Do,High,"Booking,Frontend",Page 3 - Booking,Date and time selection
+Integrate Google Calendar API,To Do,High,"API,Scheduling",Booking System,Avoid double booking
+Implement 22-Hour Booking Rule,To Do,High,"Business Rules,Validation",Booking Logic,One booking equals 22 hours
+Prevent Double Booking,To Do,High,"Risk Control,Scheduling",Booking Validation,Core system risk
+Implement Pencil Booking (50% Down Payment),To Do,High,"Payment,Booking Control",Payment System,Temporary reservation hold
+Create Reference Number Submission Flow,To Do,High,"Payment,Verification",Payment Confirmation,Manual admin validation
+Admin Email Notification for Payments,Backlog,Medium,"Notification,Admin",Admin System,Payment alerts
+Create Cancellation Request Form,Backlog,Medium,"Cancellation,Forms",Booking Management,Client cancellation flow
+Implement ₱2000 Cancellation Fee Rule,To Do,High,"Payment,Business Rules",Cancellation Logic,Penalty enforcement
+Generate Cancellation Waiver,Backlog,Medium,"Legal,Documentation",Cancellation System,Client info and reason
+Design Admin Analytics Dashboard,Backlog,Medium,"Analytics,Admin",Page 4 - Analytics,Booking and payment overview
+Track Booking and Cancellation Data,Backlog,Medium,"Data,Reports",Analytics,For reports and trends
+Identify Fake Customer Indicators,To Do,High,"Risk Management,Security",System Logic,Prevent scam bookings
+Document Double Booking Scenarios,Backlog,Medium,"Testing,Risk Control",QA,For system testing
+Write System Objectives & Scope,To Do,High,"Documentation,Thesis",Documentation,Required for thesis
+Create System Flowchart and ERD,To Do,High,"Design,Thesis",System Design,Visual system explanation
+Prepare 5 Whys and Risk Analysis,To Do,Medium,"Analysis,Thesis",Documentation,Root cause justification
