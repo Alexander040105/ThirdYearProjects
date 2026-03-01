@@ -1,0 +1,13 @@
+library(tidyverse)   
+
+current_directory <- getwd()
+df <- read_csv(file.path(current_directory, "Retail_StoreDataset.csv"))
+head(df, 5)
+summary(df)
+glimpse(df)
+colSums(is.na(df))
+
+# ── Drop rows with any NA
+df <- df |> drop_na()
+summary(df)
+write_csv(df, "cleaned_retail_sales_data.csv")

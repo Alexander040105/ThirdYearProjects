@@ -31,7 +31,7 @@ CREATE TABLE barangay(
     REFERENCES ph_provinces.municipality(municipality_id)
 );
 
-LOAD DATA LOCAL INFILE 'D:\\63947\\Documents\\region.csv'
+LOAD DATA LOCAL INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\region_table.csv'
 INTO TABLE region
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -39,7 +39,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS
 (region_id, region_name);
 
-LOAD DATA LOCAL INFILE 'D:\\63947\\Documents\\province.csv'
+LOAD DATA LOCAL INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\province_table.csv'
 INTO TABLE province
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -47,7 +47,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS
 (region_id, province_id, province_name);
 
-LOAD DATA LOCAL INFILE 'D:\\63947\\Documents\\municipality.csv'
+LOAD DATA LOCAL INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\municipality_table.csv'
 INTO TABLE municipality
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -55,7 +55,7 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS
 (province_id, municipality_id, municipality_name);
 
-LOAD DATA LOCAL INFILE 'D:\\63947\\Documents\\barangay_masterlist.csv'
+LOAD DATA LOCAL INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\barangay_table.csv'
 INTO TABLE barangay
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
