@@ -7,6 +7,8 @@ head(df, 5)
 summary(df)
 glimpse(df)
 colSums(is.na(df))
-df <- df |> drop_na()
+df <- df |>
+  drop_na() |>
+  filter(if_all(where(is.numeric), ~ .x != 0))
 summary(df)
 write_csv(df, "cleaned_retail_sales_data.csv")
