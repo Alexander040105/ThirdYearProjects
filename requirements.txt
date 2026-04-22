@@ -9,7 +9,6 @@ scikit-learn
 flask
 dotenv
 mlxtend
-mysql-connector-python-rf
-mysql-connector-python
-sqlalchemy
-pymysql
+dash==2.14.2
+scipy
+dash-bootstrap-components==1.5.0
