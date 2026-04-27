@@ -382,10 +382,9 @@ app.layout = dbc.Container(
         ),
         dbc.Row(
             [
-                dbc.Col(metric_card("Pearson Correlation", "metric-corr", "metric-corr-note"), md=3),
-                dbc.Col(metric_card("P-Value", "metric-pvalue", "metric-pvalue-note"), md=3),
-                dbc.Col(metric_card("Trade Volume In Scope", "metric-trade", "metric-trade-note"), md=3),
-                dbc.Col(metric_card("Most Exposed View", "metric-exposure", "metric-exposure-note"), md=3),
+                dbc.Col(metric_card("Pearson Correlation", "metric-corr", "metric-corr-note"), md=4),
+                dbc.Col(metric_card("Trade Volume In Scope", "metric-trade", "metric-trade-note"), md=4),
+                dbc.Col(metric_card("Most Exposed View", "metric-exposure", "metric-exposure-note"), md=4),
             ],
             className="g-4 mb-4",
         ),
@@ -462,8 +461,6 @@ app.layout = dbc.Container(
 @app.callback(
     Output("metric-corr", "children"),
     Output("metric-corr-note", "children"),
-    Output("metric-pvalue", "children"),
-    Output("metric-pvalue-note", "children"),
     Output("metric-trade", "children"),
     Output("metric-trade-note", "children"),
     Output("metric-exposure", "children"),
@@ -500,8 +497,6 @@ def update_dashboard(year_range, region_value, flow_value, country_values):
         return (
             "N/A",
             no_data_message,
-            "N/A",
-            "Adjust the filters to bring data back into scope.",
             "0.0B USD",
             "No data selected",
             "N/A",
@@ -528,8 +523,6 @@ def update_dashboard(year_range, region_value, flow_value, country_values):
         f"Framework answer to Q2: {interpret_strength(corr_value).capitalize()} "
         f"{interpret_direction(corr_value)} across {len(country_year)} country-year observations."
     )
-    p_label = f"{p_value:.4f}" if pd.notna(p_value) else "N/A"
-    p_note = "Statistically significant at 5% level." if pd.notna(p_value) and p_value < 0.05 else "Treat as directional evidence, not proof."
     trade_label = f"{filtered['Trade_Value_B'].sum():,.1f}B USD"
     trade_note = f"{filtered['Country_Label'].nunique()} countries, {len(filtered)} rows, {start_year}-{end_year}."
 
@@ -752,8 +745,6 @@ def update_dashboard(year_range, region_value, flow_value, country_values):
     return (
         corr_label,
         corr_note,
-        p_label,
-        p_note,
         trade_label,
         trade_note,
         exposure_label,
